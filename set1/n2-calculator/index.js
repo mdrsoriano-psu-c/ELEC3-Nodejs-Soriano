@@ -1,18 +1,9 @@
-// Full Name: MICA DANIELLE R. SORIANO
-// Section: IV-BSIT C
-// Course: ELEC 3 - Node.js
-// Activity: N2 - Modular Calculator
-// Date: November 24, 2026
-
-// Import custom and built-in modules.
 const operations = require("./operations");
 const { formatResult } = require("./formatter");
 const path = require("node:path");
 
-// Read command-line arguments.
 const [operation, first, second] = process.argv.slice(2);
 
-// Display student information.
 console.log("==========================================");
 console.log("            MODULAR CALCULATOR");
 console.log("==========================================");
@@ -22,11 +13,11 @@ console.log("Activity: N2");
 console.log("Program: " + path.basename(__filename));
 console.log("------------------------------------------");
 
-// Convert arguments into numbers.
+
 const a = Number(first);
 const b = Number(second);
 
-// Validate the operation and numbers.
+
 if (!Object.hasOwn(operations, operation)) {
     console.log("Error: Unknown operation.");
 } else if (
